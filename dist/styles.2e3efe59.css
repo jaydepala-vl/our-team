@@ -1,4 +1,17 @@
 /* @import './node_modules/compass-mixins/lib/compass'; */
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+  }
+}
 html,
 body {
   height: 100%;
@@ -22,7 +35,7 @@ body,
 }
 
 .container {
-  top: 1050px;
+  top: 1390px;
   position: relative;
 }
 
@@ -87,7 +100,10 @@ body,
   top: 88%;
   left: calc(50% - 0.5em);
   box-shadow: 0 0 0 3px var(--clr);
-  transition: opacity 0.16s 0.4s;
+  transition: opacity 0.16s 0.4s ease-in-out;
+}
+.hex.hex-layer a.hex:hover:after {
+  animation: pulse 1.5s infinite;
 }
 .hex.hex-layer:target {
   z-index: 10;
@@ -318,4 +334,4 @@ body,
   transition-delay: 0s;
 }
 
-/*# sourceMappingURL=../dist/styles.5665b541.css.map */
+/*# sourceMappingURL=../dist/styles.2e3efe59.css.map */

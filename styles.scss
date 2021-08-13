@@ -6,14 +6,28 @@ $a3: #359944;
 $a4: #1A4D93;
 $a5: #E65539;
 
-$a1-dark: rgb(#880501, 0.1);
-$a2-dark: rgb(#FFB249, 0.1);
-$a3-dark: rgb(#359944, 0.1);
-$a4-dark: rgb(#1A4D93, 0.1);
-$a5-dark: rgb(#E65539, 0.1);
+
+$color-first          : #65587f;
+$color-second         : #f18867;
+$color-third          : #e85f99;
+$color-forth          : #50bda1;
 
 $pr: #222e48;
 $bg: #faf2e8;
+
+@keyframes pulse {
+	0% {
+	  transform: scale(.9);
+	}
+	70% {
+	  transform: scale(1);
+	  box-shadow: 0 0 0 50px rgba(#5a99d4, 0);
+	}
+	  100% {
+	  transform: scale(.9);
+	  box-shadow: 0 0 0 0 rgba(#5a99d4, 0);
+	}
+}
 
 html,
 body {
@@ -38,7 +52,7 @@ body,
 }
 
 .container {
-    top: 1050px;
+    top: 1390px;
     position: relative;
 }
 
@@ -101,7 +115,13 @@ body,
 				top: 88%;
 				left: calc(50% - 0.5em);
 				box-shadow: 0 0 0 3px var(--clr);
-				transition: opacity 0.16s 0.4s;
+				transition: opacity 0.16s 0.4s ease-in-out;
+			}
+
+			&:hover {
+				&:after {
+					animation: pulse 1.5s infinite;
+				}
 			}
 		}
 		&:target {
