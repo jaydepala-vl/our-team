@@ -140,7 +140,7 @@ body,
 
 	&[data-h1]:before {
 		content: attr(data-h1);
-		font: calc(var(--w) / 3) "Permanent Marker", sans-serif;
+		font: calc(var(--w) / 3) / 1 "Permanent Marker", sans-serif;
 		position: absolute;
 		width: 70%;
 		text-align: left;
@@ -160,12 +160,12 @@ body,
 
 	&[data-h1]:before {
 		content: attr(data-h1);
-		font: calc(var(--w) / 3) "Permanent Marker", sans-serif;
+		font: calc(var(--w) / 3) / 1 "Permanent Marker", sans-serif;
 	}
 
 	&[data-h1]:before {
 		content: attr(data-h1);
-		font: calc(var(--w) / 3) "Permanent Marker", sans-serif;
+		font: calc(var(--w) / 3) / 1 "Permanent Marker", sans-serif;
 		transform: translate(-65%, -43%) rotate(-16deg);
 	}
 

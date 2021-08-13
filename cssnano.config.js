@@ -10,6 +10,7 @@ module.exports = {
         removeQuotes: false,
       },
       normalizeUrl: false,
+      minifyParams: false
     },
   ],
 };
