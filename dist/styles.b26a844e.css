@@ -128,6 +128,17 @@ body,
   height: 100vh;
   transition: height 0.2s 0.2s;
 }
+.hex.hex-layer:hover:before {
+  content: "";
+  transition: 0.5s ease;
+  width: 105%;
+  height: 105%;
+  display: block;
+  position: absolute;
+  top: 110px;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
 .hex:hover {
   z-index: 9;
 }
@@ -167,12 +178,24 @@ body,
 .hex.negr[data-h2]:before {
   transform: translate(-49%, -50%) rotate(31deg);
 }
+.hex.tac:before {
+  text-align: center;
+}
 .hex[data-h3]:before {
   content: attr(data-h3);
-  width: 56%;
-  top: 70%;
+  width: 65%;
+  top: 75%;
   text-align: center;
   font: 25px/1.15 sans-serif;
+}
+.hex[data-h3].one-line:before {
+  width: 60%;
+}
+.hex[data-h3].two-lines:before {
+  width: 70%;
+}
+.hex[data-h3].too-long:before {
+  font: 21px/1.15 sans-serif;
 }
 
 .overlay {
@@ -196,6 +219,9 @@ body,
   bottom: 0;
 }
 
+/* .tot {
+	transform-origin: 50% 0;
+} */
 .tob {
   transform-origin: 50% 100;
 }
@@ -334,4 +360,4 @@ body,
   transition-delay: 0s;
 }
 
-/*# sourceMappingURL=../dist/styles.2e3efe59.css.map */
+/*# sourceMappingURL=../dist/styles.b26a844e.css.map */

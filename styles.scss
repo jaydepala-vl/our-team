@@ -6,12 +6,6 @@ $a3: #359944;
 $a4: #1A4D93;
 $a5: #E65539;
 
-
-$color-first          : #65587f;
-$color-second         : #f18867;
-$color-third          : #e85f99;
-$color-forth          : #50bda1;
-
 $pr: #222e48;
 $bg: #faf2e8;
 
@@ -148,6 +142,19 @@ body,
 				}
 			}
 		}
+		&:hover {
+			&:before {
+				content: '';
+				transition: 0.5s ease;
+				width: 105%;
+				height: 105%;
+				display: block;
+				position: absolute;
+				top: 110px;
+				clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+				-webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+			}
+		}
 	}
 
 	&:hover {
@@ -198,13 +205,24 @@ body,
 	&.negr[data-h2]:before {
 		transform: translate(-49%, -50%) rotate(31deg);
 	}
-
+	&.tac:before {
+		text-align: center;
+	}
 	&[data-h3]:before {
 		content: attr(data-h3);
-		width: 56%;
-		top: 70%;
+		width: 65%;
+		top: 75%;
 		text-align: center;
 		font: 25px/1.15 sans-serif;
+	}
+	&[data-h3].one-line:before {
+		width: 60%;
+	}
+	&[data-h3].two-lines:before {
+		width: 70%;
+	}
+	&[data-h3].too-long:before {
+		font: 21px/1.15 sans-serif;
 	}
 }
 .overlay {
@@ -230,9 +248,9 @@ body,
 	}
 }
 
-.tot {
-	//transform-origin: 50% 0;
-}
+/* .tot {
+	transform-origin: 50% 0;
+} */
 
 .tob {
 	transform-origin: 50% 100;
